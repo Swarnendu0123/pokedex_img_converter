@@ -11,7 +11,6 @@ else:
 # opening the folder
 if (os.path.exists(first)):
     files = os.listdir(first)
-    print(files)
 else:
     print("No folder found")
 

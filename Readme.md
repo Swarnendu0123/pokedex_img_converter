@@ -35,17 +35,25 @@ python convert_images.py poke_dex converted_images
 
 ### Source Images (poke_dex folder):
 
-1. Bulbasaur ![Bulbasaur](poke_dex/bulbasaur.jpg)
-2. Charmander ![Charmander](poke_dex/charmander.jpg)
-3. Pikachu ![Pikachu](poke_dex/pikachu.jpg)
-4. Squirtle ![Squirtle](poke_dex/squirtle.jpg)
+1. Bulbasaur:
+![Bulbasaur](poke_dex/bulbasaur.jpg)
+2. Charmander:
+![Charmander](poke_dex/charmander.jpg)
+3. Pikachu:
+![Pikachu](poke_dex/pikachu.jpg)
+4. Squirtle:
+![Squirtle](poke_dex/squirtle.jpg)
 
 ### Converted Images (converted_images folder):
 
-1. Bulbasaur ![Bulbasaur Converted](converted_images/bulbasaur.png)
-2. Charmander ![Charmander Converted](converted_images/charmander.png)
-3. Pikachu ![Pikachu Converted](converted_images/pikachu.png)
-4. Squirtle ![Squirtle Converted](converted_images/squirtle.png)
+1. Bulbasaur:
+![Bulbasaur Converted](converted_images/bulbasaur.png)
+2. Charmander:
+![Charmander Converted](converted_images/charmander.png)
+3. Pikachu:
+![Pikachu Converted](converted_images/pikachu.png)
+4. Squirtle:
+![Squirtle Converted](converted_images/squirtle.png)
 
 ## Contributing
 
