@@ -15,8 +15,8 @@ PokeDex Image Converter is a Python script that converts images of Pokémon from
 Make sure you have Python installed. Clone the repository and install the required packages using `pip`.
 
 ```bash
-git clone https://github.com/your-username/pokedex-image-converter.git
-cd pokedex-image-converter
+git clone https://github.com/Swarnendu0123/jpeg_to_png
+cd jpeg_to_png
 pip install -r requirements.txt
 ```
 
