@@ -2,28 +2,28 @@ import sys
 import os
 from PIL import Image
 
-# grab the first and second arguments
+# grab the source_folder and output_folder arguments
 if len(sys.argv) == 3:
-    first, second = sys.argv[1], sys.argv[2]
+    source_folder, output_folder = sys.argv[1], sys.argv[2]
 else:
-    first, second = sys.argv[1], ""
+    source_folder, output_folder = sys.argv[1], ""
 
 # opening the folder
-if (os.path.exists(first)):
-    files = os.listdir(first)
+if (os.path.exists(source_folder)):
+    files = os.listdir(source_folder)
 else:
     print("No folder found")
 
 # check if the /new exist or not if not then create it
-if not os.path.exists(second):
+if not os.path.exists(output_folder):
     os.mkdir("converted_images")
-    second = "./converted_images"
+    output_folder = "./converted_images"
 
 # loop througn poke_dex
 for file in files:
-    img = Image.open(first+"/"+file)
+    img = Image.open(source_folder+"/"+file)
     # convert images to png 
     file = file.split(".")[0]
     path = file + ".png"
     #save the image
-    img.save(os.path.join("./"+second, path))
+    img.save(os.path.join("./"+output_folder, path))
