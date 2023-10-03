@@ -1,6 +1,7 @@
 import sys
 import os
 from PIL import Image
+from rembg import remove
 
 # grab the source_folder and output_folder arguments
 if len(sys.argv) == 3:
@@ -31,6 +32,12 @@ user_choice = input("Enter the number of your choice: ")
 
 #Makes sure user put in a valid option, otherwise converts to PNG
 if (user_choice.isnumeric()):
+    if (user_choice == '1'):
+        # If user select PNG Check if user want bg remover or not
+        print("Select Option. Available Options:")
+        print("     1. Remove Background")
+        print("     2. Not Remove Background")
+        background_color = input("Enter the number of your choice: ")
     if (user_choice == "2"):
         filetype = ".jpeg"
     elif (user_choice == "3"):
@@ -42,7 +49,11 @@ if (user_choice.isnumeric()):
 # loop througn poke_dex
 try:
     for file in files:
-        img = Image.open(source_folder+"/"+file)
+        if user_choice == '1':
+            img = Image.open(source_folder+"/"+file)
+            img = remove(img)
+        else:
+            img = Image.open(source_folder+"/"+file)
         # convert images to png 
         file = file.split(".")[0]
         path = file + filetype
