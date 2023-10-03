@@ -41,8 +41,9 @@ Welcome to Hacktoberfest with PokeDex Image Converter! We're excited to have you
    ```
    git push origin feature/your-feature-name
    ```
-
-8. Open a pull request to the `main` branch of the original repository. Provide a detailed description of your changes and the problem you're solving.
+8. If you are adding any feature try to update the README.md, explaining your new feature.
+  
+9. Open a pull request to the `main` branch of the original repository. Provide a detailed description of your changes and the problem you're solving.
 
 ## Code of Conduct
 
