@@ -49,11 +49,10 @@ if (user_choice.isnumeric()):
 # loop througn poke_dex
 try:
     for file in files:
-        if user_choice == '1':
-            img = Image.open(source_folder+"/"+file)
+        img = Image.open(source_folder+"/"+file)
+        if background_color == '1':
             img = remove(img)
-        else:
-            img = Image.open(source_folder+"/"+file)
+        
         # convert images to png 
         file = file.split(".")[0]
         path = file + filetype
