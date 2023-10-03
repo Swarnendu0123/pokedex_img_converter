@@ -18,6 +18,26 @@ else:
 if not os.path.exists(output_folder):
     os.mkdir("converted_images")
     output_folder = "./converted_images"
+    output_files = os.listdir(source_folder)
+
+filetype = ".png"
+
+print("Select the desired output format. Available Options: ")
+print("     1. PNG")
+print("     2. JPEG")
+print("     3. GIF")
+print("     4. BMP")
+user_choice = input("Enter the number of your choice: ")
+
+#Makes sure user put in a valid option, otherwise converts to PNG
+if (user_choice.isnumeric()):
+    if (user_choice == "2"):
+        filetype = ".jpeg"
+    elif (user_choice == "3"):
+        filetype = ".gif"
+    elif (user_choice == "4"):
+        filetype = ".bmp"
+    
 
 # loop througn poke_dex
 try:
