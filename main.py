@@ -22,6 +22,11 @@ if not os.path.exists(output_folder):
     output_files = os.listdir(source_folder)
 
 filetype = ".png"
+# If user select PNG Check if user want bg remover or not
+print("Select Option. Available Options:")
+print("     1. Remove Background")
+print("     2. Not Remove Background")
+background_color = input("Enter the number of your choice: ")
 
 print("Select the desired output format. Available Options: ")
 print("     1. PNG")
@@ -32,12 +37,6 @@ user_choice = input("Enter the number of your choice: ")
 
 #Makes sure user put in a valid option, otherwise converts to PNG
 if (user_choice.isnumeric()):
-    if (user_choice == '1'):
-        # If user select PNG Check if user want bg remover or not
-        print("Select Option. Available Options:")
-        print("     1. Remove Background")
-        print("     2. Not Remove Background")
-        background_color = input("Enter the number of your choice: ")
     if (user_choice == "2"):
         filetype = ".jpeg"
     elif (user_choice == "3"):
@@ -49,9 +48,10 @@ if (user_choice.isnumeric()):
 # loop througn poke_dex
 try:
     for file in files:
-        if user_choice == '1':
+        if background_color == '1':
             img = Image.open(source_folder+"/"+file)
             img = remove(img)
+            img = img.convert('RGB') if user_choice == "2" else img
         else:
             img = Image.open(source_folder+"/"+file)
         # convert images to png 
