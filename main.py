@@ -4,6 +4,18 @@ from PIL import Image
 from rembg.bg import remove
 from tqdm import tqdm
 
+
+def export(array, bool=False):
+    for i in array:
+        img = Image.open(source_folder + "/" + i)
+        if bool == True:
+            print(f"Removing background from {i}")
+            img = remove(img)
+        i = i.split(".")[0]
+        path = i + ".png"
+        img.save(os.path.join("./" + output_folder, path))
+
+
 # grab the source_folder and output_folder arguments
 if len(sys.argv) == 3:
     source_folder, output_folder = sys.argv[1], sys.argv[2]
@@ -23,15 +35,10 @@ if not os.path.exists(output_folder):
 
 # loop througn poke_dex
 if files != 0:
-    print(f"Beginning to remove background from {len(files)} images")
-    for file in files:
-        img = Image.open(source_folder + "/" + file)
-        img = remove(img)
-        print(f"Removing background from {file}")
-        # convert images to png
-        file = file.split(".")[0]
-        path = file + ".png"
-        # save the image
-        img.save(os.path.join("./" + output_folder, path))
+    input = input("Do you want to remove background from all images? (y/n): ")
+    if input == "y":
+        export(files, True)
+    else:
+        export(files, False)
 else:
     print("No files found")
