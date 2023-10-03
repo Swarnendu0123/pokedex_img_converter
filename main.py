@@ -20,10 +20,13 @@ if not os.path.exists(output_folder):
     output_folder = "./converted_images"
 
 # loop througn poke_dex
-for file in files:
-    img = Image.open(source_folder+"/"+file)
-    # convert images to png 
-    file = file.split(".")[0]
-    path = file + ".png"
-    #save the image
-    img.save(os.path.join("./"+output_folder, path))
+try:
+    for file in files:
+        img = Image.open(source_folder+"/"+file)
+        # convert images to png 
+        file = file.split(".")[0]
+        path = file + ".png"
+        #save the image
+        img.save(os.path.join("./"+output_folder, path))
+except Exception as e:
+    print(f"There is an error in conversion: {e}")
