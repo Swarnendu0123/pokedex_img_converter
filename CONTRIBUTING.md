@@ -1,7 +1,3 @@
-Certainly! Here's the `CONTRIBUTING.md` file for your PokeDex Image Converter project, tailored for participation in Hacktoberfest:
-
----
-
 # Contributing to PokeDex Image Converter for Hacktoberfest
 
 Welcome to Hacktoberfest with PokeDex Image Converter! We're excited to have you on board. Before you get started, please take a moment to review the following guidelines and rules to ensure a smooth and enjoyable contribution experience.
@@ -53,7 +49,3 @@ Welcome to Hacktoberfest with PokeDex Image Converter! We're excited to have you
 Please review and adhere to our [Code of Conduct](CODE_OF_CONDUCT.md). Be respectful and considerate of others, fostering a positive and inclusive environment for all contributors.
 
 Thank you for your valuable contributions! Let's make Hacktoberfest with PokeDex Image Converter a success!
-
---- 
-
-Feel free to customize this template further to fit the specific guidelines and processes of your project. Happy hacking!
