@@ -6,7 +6,7 @@ from PIL import Image
 if len(sys.argv) == 3:
     source_folder, output_folder = sys.argv[1], sys.argv[2]
 else:
-    source_folder, output_folder = sys.argv[1], ""
+    source_folder, output_folder = sys.argv[1], "converted_images"
 
 # opening the folder
 if (os.path.exists(source_folder)):
