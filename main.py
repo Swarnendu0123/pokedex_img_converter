@@ -25,6 +25,7 @@ if not os.path.exists(output_folder):
     output_folder = "./converted_images"
     output_files = os.listdir(source_folder)
 
+# function to fetch pokemon
 def fetch_pokemon(name):
     print("Fetching " + name)
     poke = pokemon(name)
@@ -32,56 +33,51 @@ def fetch_pokemon(name):
     image = Image.open(BytesIO(pic))
     filetype = ".png"
     path = name + filetype
-    new_size = (500,500)
+    new_size = (3000,3000)
     image = image.resize(new_size)
     image.save(os.path.join("./"+source_folder,path ))
 
-print("Do you want to download a new pokemon : ")
-print("     1. Yes, please.")
-print("     2. No, thanks.")
-new_pokemon_choice = input("Enter the number of your choice: ")
-if new_pokemon_choice == "1" :
+
+new_pokemon_choice = input("Do you want to download a new pokemon(y/n): ")
+
+if new_pokemon_choice == "y" :
     new_pokemon = input("Enter the name of the pokemon : ")
     fetch_pokemon(new_pokemon)
 
 filetype = ".png"
 # If user select PNG Check if user want bg remover or not
-print("Select Option. Available Options:")
-print("     1. Remove Background")
-print("     2. Not Remove Background")
-background_color = input("Enter the number of your choice: ")
+remove_background = input("Do you want to remove the background(y/n): ")
 
 print("Select the desired output format. Available Options: ")
 print("     1. PNG")
 print("     2. JPEG")
 print("     3. GIF")
 print("     4. BMP")
-user_choice = input("Enter the number of your choice: ")
-print("Select Option. Available Options:")
-print("     1. Want to Compress Images")
-print("     2. Not Want to Compress Images")
-compress_choice = input("Enter the number of your choice: ")
-if compress_choice == '1':
-    print("What is threshold you want to compress")
+img_format = input("Enter the number of your choice: ")
+
+
+compress_choice = input("Do you want to Compress Images?(y/n): ")
+if compress_choice == 'y':
+    print("What is size you want to compress?")
     width, height = int(input("Enter the width (in pixel): ")), int(input("Enter the height (in pixel): "))
 
 #Makes sure user put in a valid option, otherwise converts to PNG
-if (user_choice.isnumeric()):
-    if (user_choice == "2"):
+if (img_format.isnumeric()):
+    if (img_format == "2"):
         filetype = ".jpeg"
-    elif (user_choice == "3"):
+    elif (img_format == "3"):
         filetype = ".gif"
-    elif (user_choice == "4"):
+    elif (img_format == "4"):
         filetype = ".bmp"
     
 
 # loop through poke_dex
 try:
     for file in files:
-        if background_color == '1':
+        if remove_background == 'y':
             img = Image.open(source_folder+"/"+file)
             img = remove(img)
-            img = img.convert('RGB') if user_choice == "2" else img
+            img = img.convert('RGB') if img_format == "2" else img
             file = file.split(".")[0]
             file = file + "_bgremoved"
         else:
