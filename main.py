@@ -40,7 +40,7 @@ print("     2. Not Want to Compress Images")
 compress_choice = input("Enter the number of your choice: ")
 if compress_choice == '1':
     print("What is threshold you want to compress")
-    width, height = int(input("Enter the width in kb: ")), int(input("Enter the height in kb : "))
+    width, height = int(input("Enter the width (in pixel): ")), int(input("Enter the height (in pixel): "))
 
 #Makes sure user put in a valid option, otherwise converts to PNG
 if (user_choice.isnumeric()):
