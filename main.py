@@ -2,6 +2,10 @@ import sys
 import os
 from PIL import Image
 from rembg import remove
+from pokebase import pokemon
+import webbrowser
+from requests import get
+from io import BytesIO
 
 # grab the source_folder and output_folder arguments
 if len(sys.argv) == 3:
@@ -20,6 +24,25 @@ if not os.path.exists(output_folder):
     os.mkdir("converted_images")
     output_folder = "./converted_images"
     output_files = os.listdir(source_folder)
+
+def fetch_pokemon(name):
+    print("Fetching " + name)
+    poke = pokemon(name)
+    pic = get(poke.sprites.front_default).content
+    image = Image.open(BytesIO(pic))
+    filetype = ".png"
+    path = name + filetype
+    new_size = (500,500)
+    image = image.resize(new_size)
+    image.save(os.path.join("./"+source_folder,path ))
+
+print("Do you want to download a new pokemon : ")
+print("     1. Yes, please.")
+print("     2. No, thanks.")
+new_pokemon_choice = input("Enter the number of your choice: ")
+if new_pokemon_choice == "1" :
+    new_pokemon = input("Enter the name of the pokemon : ")
+    fetch_pokemon(new_pokemon)
 
 filetype = ".png"
 # If user select PNG Check if user want bg remover or not
@@ -76,3 +99,5 @@ try:
             img.save(os.path.join("./"+output_folder, path))
 except Exception as e:
     print(f"There is an error in conversion: {e}")
+
+
