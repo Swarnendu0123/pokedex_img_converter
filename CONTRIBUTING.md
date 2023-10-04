@@ -1,3 +1,5 @@
+![HacktoberFest 2023 banner](https://hacktoberfestswaglist.com/img/hf10_horz_fcd_rgb.png)
+
 # Contributing to PokeDex Image Converter for Hacktoberfest
 
 Welcome to Hacktoberfest with PokeDex Image Converter! We're excited to have you on board. Before you get started, please take a moment to review the following guidelines and rules to ensure a smooth and enjoyable contribution experience.
@@ -19,8 +21,8 @@ Welcome to Hacktoberfest with PokeDex Image Converter! We're excited to have you
 1. Fork the repository on GitHub.
 2. Clone your forked repository to your local machine:
    ```
-   git clone https://github.com/your-username/jpeg_to_png.git
-   cd jpeg_to_png
+   git clone https://github.com/Swarnendu0123/pokedex_img_converter
+   cd pokedex_img_converter
    ```
    
 3. Create a new branch for your contributions:
@@ -41,8 +43,10 @@ Welcome to Hacktoberfest with PokeDex Image Converter! We're excited to have you
    ```
    git push origin feature/your-feature-name
    ```
-
-8. Open a pull request to the `main` branch of the original repository. Provide a detailed description of your changes and the problem you're solving.
+8. If you are adding any feature try to update the README.md, explaining your new feature.
+  
+9. Open a pull request to the `main` branch of the original repository. Provide a detailed description of your changes and the problem you're solving.
+10. Be respectful to maintainers, don't ask to assign any issues. Try to solve it and the best pull request will be accepted.
 
 ## Code of Conduct
 

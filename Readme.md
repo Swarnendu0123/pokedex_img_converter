@@ -1,3 +1,5 @@
+## HACTOBERFEST 2023
+
 # PokeDex Image Converter
 
 PokeDex Image Converter is a Python script that converts images of Pokémon from the `poke_dex` folder to PNG, JPEG, GIF, or BMP format. The script takes images with names `['bulbasaur.jpg', 'charmander.jpg', 'pikachu.jpg', 'squirtle.jpg']` and converts them to PNG files.
@@ -15,9 +17,9 @@ PokeDex Image Converter is a Python script that converts images of Pokémon from
 Make sure you have Python installed. Clone the repository and install the required packages using `pip`.
 
 ```bash
-git clone https://github.com/Swarnendu0123/jpeg_to_png
-cd jpeg_to_png
-pip install -r requirements.txt
+git clone https://github.com/Swarnendu0123/pokedex_img_converter.git
+cd pokedex_img_converter
+python3 -m pip install -r requirements.txt
 ```
 
 ## Usage
@@ -47,13 +49,13 @@ python main.py poke_dex converted_images
 ### Converted Images (converted_images folder):
 
 1. Bulbasaur:
-![Bulbasaur Converted](converted_images/bulbasaur.png)
+![Bulbasaur Converted](converted_images/bulbasaur_bgremoved.jpeg)
 2. Charmander:
-![Charmander Converted](converted_images/charmander.png)
+![Charmander Converted](converted_images/charmander_bgremoved.jpeg)
 3. Pikachu:
-![Pikachu Converted](converted_images/pikachu.png)
+![Pikachu Converted](converted_images/pikachu_bgremoved.jpeg)
 4. Squirtle:
-![Squirtle Converted](converted_images/squirtle.png)
+![Squirtle Converted](converted_images/squirtle_bgremoved.jpeg)
 
 ## Contributing
 

@@ -59,10 +59,13 @@ try:
             img = Image.open(source_folder+"/"+file)
             img = remove(img)
             img = img.convert('RGB') if user_choice == "2" else img
+            file = file.split(".")[0]
+            file = file + "_bgremoved"
         else:
             img = Image.open(source_folder+"/"+file)
+            file = file.split(".")[0]
         # convert images to png 
-        file = file.split(".")[0]
+        
         path = file + filetype
         #save the image
         if compress_choice == "1": 
