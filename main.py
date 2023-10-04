@@ -40,9 +40,7 @@ print("     2. Not Want to Compress Images")
 compress_choice = input("Enter the number of your choice: ")
 if compress_choice == '1':
     print("What is threshold you want to compress")
-    threshold = int(input("Enter the number of: "))
-else:
-    threshold = 0
+    width, height = int(input("Enter the number of width : ")), int(input("Enter the number of height : "))
 
 #Makes sure user put in a valid option, otherwise converts to PNG
 if (user_choice.isnumeric()):
@@ -67,11 +65,10 @@ try:
         file = file.split(".")[0]
         path = file + filetype
         #save the image
-        if compress_choice == "1":
-            width, height = img.size
-            new_size = (width//2, height//2)
+        if compress_choice == "1": 
+            new_size = (width, height)
             img = img.resize(new_size)
-            img.save(os.path.join("./"+output_folder, path),optimize = True, quality = threshold)
+            img.save(os.path.join("./"+output_folder, path),optimize = True)
         else:
             img.save(os.path.join("./"+output_folder, path))
 except Exception as e:
