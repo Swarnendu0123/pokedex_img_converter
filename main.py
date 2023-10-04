@@ -55,6 +55,7 @@ try:
         else:
             img = Image.open(source_folder+"/"+file)
         # convert images to png 
+        file = file.split(".")[0]
         path = file + filetype
         #save the image
         img.save(os.path.join("./"+output_folder, path))
