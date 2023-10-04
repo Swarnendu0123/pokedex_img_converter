@@ -54,6 +54,7 @@ Fetching meowth
 ```
 
 `poke_dex/meowth.png`
+
 ![Meowth](poke_dex/meowth.png)
     
 The script asks the user if they want to download a new Pokémon image. If the user chooses to download a new Pokémon and enters the name (for example, meowth), the fetch_pokemon function is called.
@@ -62,9 +63,11 @@ The script asks the user if they want to download a new Pokémon image. If the u
  Users have the flexibility to remove the background from the Pokémon images. The script utilizes the `rembg` library to achieve this functionality.
 
  `poke_dex/pikachu.jpg`
+
 ![poke_dex/pikachu.jpg](poke_dex/pikachu.jpg)
 
 `converted_images/pikachu_bgremoved.png`
+
 ![poke_dex/pikachu.jpg](converted_images/pikachu_bgremoved.png)
 
 ### 4. **Image Format Conversion:**
@@ -83,29 +86,37 @@ The script asks the user if they want to download a new Pokémon image. If the u
 #### Source Images (poke_dex folder):
 
 `poke_dex/bulbasaur.jpg`
+
 ![Bulbasaur](poke_dex/bulbasaur.jpg)
 
 `poke_dex/charmander.jpg`
+
 ![Charmander](poke_dex/charmander.jpg)
 
 `poke_dex/pikachu.jpg`
+
 ![Pikachu](poke_dex/pikachu.jpg)
 
 `poke_dex/squirtle.jpg`
+
 ![Squirtle](poke_dex/squirtle.jpg)
 
 #### Converted Images (converted_images folder):
 
 `converted_images/bulbasaur_bgremoved.png`
+
 ![Bulbasaur Converted](converted_images/bulbasaur_bgremoved.png)
 
 `converted_images/charmander_bgremoved.png`
+
 ![Charmander Converted](converted_images/charmander_bgremoved.png)
 
 `converted_images/pikachu_bgremoved.png`
+
 ![Pikachu Converted](converted_images/pikachu_bgremoved.png)
 
 `converted_images/squirtle_bgremoved.png`
+
 ![Squirtle Converted](converted_images/squirtle_bgremoved.png)
 
 ### 8. **External Libraries:**
