@@ -53,19 +53,19 @@ Enter the name of the pokemon : meowth
 Fetching meowth
 ```
 
-`poke_dex\meowth.png`
-![Meowth](poke_dex\meowth.png)
+`poke_dex/meowth.png`
+![Meowth](poke_dex/meowth.png)
     
 The script asks the user if they want to download a new Pokémon image. If the user chooses to download a new Pokémon and enters the name (for example, meowth), the fetch_pokemon function is called.
 
 ### 3. **Background Removal:**
  Users have the flexibility to remove the background from the Pokémon images. The script utilizes the `rembg` library to achieve this functionality.
 
- `poke_dex\pikachu.jpg`
-![poke_dex\pikachu.jpg](poke_dex\pikachu.jpg)
+ `poke_dex/pikachu.jpg`
+![poke_dex/pikachu.jpg](poke_dex/pikachu.jpg)
 
-`converted_images\pikachu_bgremoved.png`
-![poke_dex\pikachu.jpg](converted_images\pikachu_bgremoved.png)
+`converted_images/pikachu_bgremoved.png`
+![poke_dex/pikachu.jpg](converted_images/pikachu_bgremoved.png)
 
 ### 4. **Image Format Conversion:**
  Users can select the desired output image format from options such as PNG, JPEG, GIF, or BMP. The script converts the images accordingly.
