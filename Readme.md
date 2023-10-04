@@ -18,7 +18,7 @@ Make sure you have Python installed. Clone the repository and install the requir
 
 ```bash
 git clone https://github.com/Swarnendu0123/pokedex_img_converter.git
-cd pkedex_img_converter
+cd pokedex_img_converter
 python3 -m pip install -r requirements.txt
 ```
 
