@@ -44,6 +44,7 @@ Welcome to Hacktoberfest with PokeDex Image Converter! We're excited to have you
 8. If you are adding any feature try to update the README.md, explaining your new feature.
   
 9. Open a pull request to the `main` branch of the original repository. Provide a detailed description of your changes and the problem you're solving.
+10. Be respectful to maintainers, don't ask to assign any issues. Try to solve it and the best pull request will be accepted.
 
 ## Code of Conduct
 
