@@ -34,6 +34,13 @@ print("     2. JPEG")
 print("     3. GIF")
 print("     4. BMP")
 user_choice = input("Enter the number of your choice: ")
+print("Select Option. Available Options:")
+print("     1. Want to Compress Images")
+print("     2. Not Want to Compress Images")
+compress_choice = input("Enter the number of your choice: ")
+if compress_choice == '1':
+    print("What is threshold you want to compress")
+    width, height = int(input("Enter the number of width : ")), int(input("Enter the number of height : "))
 
 #Makes sure user put in a valid option, otherwise converts to PNG
 if (user_choice.isnumeric()):
@@ -61,6 +68,11 @@ try:
         
         path = file + filetype
         #save the image
-        img.save(os.path.join("./"+output_folder, path))
+        if compress_choice == "1": 
+            new_size = (width, height)
+            img = img.resize(new_size)
+            img.save(os.path.join("./"+output_folder, path),optimize = True)
+        else:
+            img.save(os.path.join("./"+output_folder, path))
 except Exception as e:
     print(f"There is an error in conversion: {e}")
