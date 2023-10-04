@@ -19,8 +19,8 @@ Welcome to Hacktoberfest with PokeDex Image Converter! We're excited to have you
 1. Fork the repository on GitHub.
 2. Clone your forked repository to your local machine:
    ```
-   git clone https://github.com/your-username/jpeg_to_png.git
-   cd jpeg_to_png
+   git clone https://github.com/Swarnendu0123/pokedex_img_converter
+   cd pokedex_img_converter
    ```
    
 3. Create a new branch for your contributions:
