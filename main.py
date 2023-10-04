@@ -40,7 +40,7 @@ print("     2. Not Want to Compress Images")
 compress_choice = input("Enter the number of your choice: ")
 if compress_choice == '1':
     print("What is threshold you want to compress")
-    width, height = int(input("Enter the number of width : ")), int(input("Enter the number of height : "))
+    width, height = int(input("Enter the width in kb: ")), int(input("Enter the height in kb : "))
 
 #Makes sure user put in a valid option, otherwise converts to PNG
 if (user_choice.isnumeric()):
@@ -52,7 +52,7 @@ if (user_choice.isnumeric()):
         filetype = ".bmp"
     
 
-# loop througn poke_dex
+# loop through poke_dex
 try:
     for file in files:
         if background_color == '1':
