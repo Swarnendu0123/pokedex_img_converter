@@ -49,13 +49,13 @@ python main.py poke_dex converted_images
 ### Converted Images (converted_images folder):
 
 1. Bulbasaur:
-![Bulbasaur Converted](converted_images/bulbasaur.png)
+![Bulbasaur Converted](converted_images/bulbasaur_bgremoved.jpeg)
 2. Charmander:
-![Charmander Converted](converted_images/charmander.png)
+![Charmander Converted](converted_images/charmander_bgremoved.jpeg)
 3. Pikachu:
-![Pikachu Converted](converted_images/pikachu.png)
+![Pikachu Converted](converted_images/pikachu_bgremoved.jpeg)
 4. Squirtle:
-![Squirtle Converted](converted_images/squirtle.png)
+![Squirtle Converted](converted_images/squirtle_bgremoved.jpeg)
 
 ## Contributing
 
