@@ -3,7 +3,6 @@ import os
 from PIL import Image
 from rembg import remove
 from pokebase import pokemon
-import webbrowser
 from requests import get
 from io import BytesIO
 
@@ -25,22 +24,27 @@ if not os.path.exists(output_folder):
     output_folder = "./converted_images"
     output_files = os.listdir(source_folder)
 
+
 # function to fetch pokemon
 def fetch_pokemon(name):
     print("Fetching " + name)
-    poke = pokemon(name)
-    pic = get(poke.sprites.front_default).content
-    image = Image.open(BytesIO(pic))
-    filetype = ".png"
-    path = name + filetype
-    new_size = (3000,3000)
-    image = image.resize(new_size)
-    image.save(os.path.join("./"+source_folder,path ))
+    name = name.lower()
+    try:
+        poke = pokemon(name)
+        pic = get(poke.sprites.front_default).content
+        image = Image.open(BytesIO(pic))
+        filetype = ".png"
+        path = name + filetype
+        new_size = (3000, 3000)
+        image = image.resize(new_size)
+        image.save(os.path.join("./"+source_folder, path))
+    except Exception as e:
+        print(f"Error : {e}")
 
 
 new_pokemon_choice = input("Do you want to download a new pokemon(y/n): ")
 
-if new_pokemon_choice == "y" :
+if new_pokemon_choice == "y":
     new_pokemon = input("Enter the name of the pokemon : ")
     fetch_pokemon(new_pokemon)
 
@@ -59,9 +63,10 @@ img_format = input("Enter the number of your choice: ")
 compress_choice = input("Do you want to Compress Images?(y/n): ")
 if compress_choice == 'y':
     print("What is size you want to compress?")
-    width, height = int(input("Enter the width (in pixel): ")), int(input("Enter the height (in pixel): "))
+    width, height = int(input("Enter the width (in pixel): ")), int(
+        input("Enter the height (in pixel): "))
 
-#Makes sure user put in a valid option, otherwise converts to PNG
+# Makes sure user put in a valid option, otherwise converts to PNG
 if (img_format.isnumeric()):
     if (img_format == "2"):
         filetype = ".jpeg"
@@ -69,7 +74,7 @@ if (img_format.isnumeric()):
         filetype = ".gif"
     elif (img_format == "4"):
         filetype = ".bmp"
-    
+
 
 # loop through poke_dex
 try:
@@ -83,17 +88,15 @@ try:
         else:
             img = Image.open(source_folder+"/"+file)
             file = file.split(".")[0]
-        # convert images to png 
-        
+        # convert images to png
+
         path = file + filetype
-        #save the image
-        if compress_choice == "1": 
+        # save the image
+        if compress_choice == "1":
             new_size = (width, height)
             img = img.resize(new_size)
-            img.save(os.path.join("./"+output_folder, path),optimize = True)
+            img.save(os.path.join("./"+output_folder, path), optimize=True)
         else:
             img.save(os.path.join("./"+output_folder, path))
 except Exception as e:
     print(f"There is an error in conversion: {e}")
-
-
