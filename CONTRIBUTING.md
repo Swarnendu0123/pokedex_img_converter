@@ -1,3 +1,5 @@
+![HacktoberFest 2023 banner](https://hacktoberfestswaglist.com/img/hf10_horz_fcd_rgb.png)
+
 # Contributing to PokeDex Image Converter for Hacktoberfest
 
 Welcome to Hacktoberfest with PokeDex Image Converter! We're excited to have you on board. Before you get started, please take a moment to review the following guidelines and rules to ensure a smooth and enjoyable contribution experience.
