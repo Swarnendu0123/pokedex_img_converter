@@ -31,7 +31,7 @@ A month-long celebration from October 1st to October 31st presented by [Digital 
 
 ## How to Contribute to PokeDex Image Converter
 
-1. Fork the repository on GitHub.
+1. Star and Fork the repository on GitHub.
 2. Clone your forked repository to your local machine:
    ```
    git clone https://github.com/Swarnendu0123/pokedex_img_converter
