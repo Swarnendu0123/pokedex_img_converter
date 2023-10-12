@@ -48,7 +48,6 @@ if new_pokemon_choice == "y":
     new_pokemon = input("Enter the name of the pokemon : ")
     fetch_pokemon(new_pokemon)
 
-filetype = ".png"
 # If user select PNG Check if user want bg remover or not
 remove_background = input("Do you want to remove the background(y/n): ")
 
@@ -67,14 +66,15 @@ if compress_choice == 'y':
         input("Enter the height (in pixel): "))
 
 # Makes sure user put in a valid option, otherwise converts to PNG
-if (img_format.isnumeric()):
-    if (img_format == "2"):
+match img_format:
+    case "2":
         filetype = ".jpeg"
-    elif (img_format == "3"):
+    case "3":
         filetype = ".gif"
-    elif (img_format == "4"):
+    case "4":
         filetype = ".bmp"
-
+    case _:
+        filetype = ".png"
 
 # loop through poke_dex
 try:
