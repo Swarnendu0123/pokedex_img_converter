@@ -16,7 +16,8 @@ else:
 if (os.path.exists(source_folder)):
     files = os.listdir(source_folder)
 else:
-    print("No folder found")
+    print("No folder found", file=sys.stderr)
+    sys.exit(1)
 
 # check if the /new exist or not if not then create it
 if not os.path.exists(output_folder):
@@ -27,7 +28,7 @@ if not os.path.exists(output_folder):
 
 # function to fetch pokemon
 def fetch_pokemon(name):
-    print("Fetching " + name)
+    print("Fetching " + name, file=sys.stderr)
     name = name.lower()
     try:
         poke = pokemon(name)
@@ -39,7 +40,8 @@ def fetch_pokemon(name):
         image = image.resize(new_size)
         image.save(os.path.join("./"+source_folder, path))
     except Exception as e:
-        print(f"Error : {e}")
+        print(f"Error : {e}", file=sys.stderr)
+        sys.exit(1)
 
 
 new_pokemon_choice = input("Do you want to download a new pokemon(y/n): ")
@@ -51,7 +53,7 @@ if new_pokemon_choice == "y":
 # If user select PNG Check if user want bg remover or not
 remove_background = input("Do you want to remove the background(y/n): ")
 
-print("Select the desired output format. Available Options: ")
+print("Select the desired output format. Available Options:")
 print("     1. PNG")
 print("     2. JPEG")
 print("     3. GIF")
@@ -61,7 +63,7 @@ img_format = input("Enter the number of your choice: ")
 
 compress_choice = input("Do you want to Compress Images?(y/n): ")
 if compress_choice == 'y':
-    print("What is size you want to compress?")
+    print("What is size you want to compress?", file=sys.stderr)
     width, height = int(input("Enter the width (in pixel): ")), int(
         input("Enter the height (in pixel): "))
 
@@ -99,4 +101,5 @@ try:
         else:
             img.save(os.path.join("./"+output_folder, path))
 except Exception as e:
-    print(f"There is an error in conversion: {e}")
+    print(f"There is an error in conversion: {e}", file=sys.stderr)
+    sys.exit(1)
